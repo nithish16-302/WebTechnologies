@@ -1,0 +1,179 @@
+<html>
+	<head>
+    <title>1602-16-737-302</title>
+    <style>
+        td,th {
+            padding:5px;
+            color:aliceblue;
+        }
+        
+        </style>
+    <script type="application/javascript">
+        function validateForm() {
+            var fname = document.forms["myForm"]["fname"].value;
+            var lname = document.forms["myForm"]["lname"].value;
+            var ph = document.forms["myForm"]["mobile"].value;
+            var city = document.forms["myForm"]["city"].value;
+            var pin = document.forms["myForm"]["pin"].value;
+            var state = document.forms["myForm"]["state"].value;
+            var xper = document.forms["myForm"]["xper"].value;
+            var cper = document.forms["myForm"]["cper"].value;
+            var gper = document.forms["myForm"]["gper"].value;
+            var mper = document.forms["myForm"]["mper"].value;
+
+            var letter = /^[a-zA-Z]+$/;
+            if (!fname.match(letter) || fname.length > 30) {
+                alert("First Name must be filled out");
+                return false;
+            }
+            if (!lname.match(letter) || fname.length > 30) {
+                alert("Last Name must be filled out");
+                return false;
+            }
+            if (!/^\d{10}$/.test(ph)) {
+                alert("mobile number is worng");
+            }
+            if (!city.match(letter) || fname.length > 30) {
+                alert("City must be filled out");
+                return false;
+            }
+            if (!/^\d{6}$/.test(pin) || pin.length > 6) {
+                alert("Pin Code is incorrect");
+                return false;
+            }
+            if (!state.match(letter) || fname.length > 30) {
+                alert("State must be filled out");
+                return false;
+            }
+
+        }
+    </script>
+</head>
+
+<form name="myForm" onsubmit="return validateForm()">
+    <h1 align="center">
+        <font color="blue">Student Registration(302)</font>
+    </h1>
+    <table bgcolor="blue" align="center">
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="fname">(max.30 characters a-z and A-Z)</td>
+
+        </tr>
+        <tr>
+            <td>last Name:</td>
+            <td><input type="text" name="lname">(max.30 characters a-z and A-Z)</td>
+        </tr>
+        <tr>
+            <td>Date Of Birth:</td>
+            <td><input type="date" name="dob"></td>
+        </tr>
+        <tr>
+            <td>EmailId:</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>Phone no.</td>
+            <td><input type="tel" name="mobile" maxlength=10></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td><input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female<br>
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><textarea name="addr"></textarea></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><input type="text" name="city">(max.30 characters a-z and A-Z)</td>
+        </tr>
+        <tr>
+            <td>Pincode:</td>
+            <td><input type="text" name="pin">(6 digit number)</td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td><input type="text" name="state">(max.30 characters a-z and A-Z)</td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td><input type="text" name="country"></td>
+
+        </tr>
+        <tr>
+            <td>Hobbies</td>
+            <td>Drawing<input type="checkbox" name="drawing">
+                singing<input type="checkbox" name="drawing">
+                Dancing<input type="checkbox" name="drawing"><br />
+                Sketching<input type="checkbox" name="drawing">
+                Others<input type="textbox" name="drawing"></td>
+
+        </tr>
+        <tr>
+            <td>Qualifications:</td>
+            <td>
+                <table bgcolor="blue">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ClassX</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="2" name="xper"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>ClassXII</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="2" name="cper"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Graduation</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="2" name="gper"></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Masters</td>
+                        <td><input type="text" maxlength="10"></td>
+                        <td><input type="text" maxlength="2" name="mper"></td>
+                        <td><input type="text"></td>
+                    </tr>
+
+                </table>
+            </td>
+
+
+        </tr>
+        <tr>
+            <td>Cources Applied For.</td>
+            <td><input type="radio" name="gender" value="male"> BCA
+                <input type="radio" name="gender" value="female"> B.Com
+                <input type="radio" name="gender" value="male"> B.Sc<br>
+                <input type="radio" name="gender" value="female"> B.A
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><Button type="submit">Submit</Button>
+                <Button type="reset">Reset</Button>
+
+        </tr>
+
+    </table>
+
+
+
+</form>
+</html>
